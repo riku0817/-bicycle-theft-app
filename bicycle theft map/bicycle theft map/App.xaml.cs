@@ -1,0 +1,12 @@
+﻿namespace bicycle_theft_map
+{
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
+
+            MainPage = new AppShell();
+        }
+    }
+}
