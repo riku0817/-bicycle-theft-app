@@ -4,7 +4,6 @@ namespace BicycleTheftApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
@@ -22,7 +21,9 @@ namespace BicycleTheftApp
 
                 if (location != null)
                 {
-                    Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(location.Latitude, location.Longitude);
+                    //現在地取得コード Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(location.Latitude, location.Longitude);
+
+                    Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(35.710006892117, 139.81081025188); // 東京スカイツリーの緯度経度を初期位置に設定
 
 
                     await mymap.MoveCamera(CameraUpdateFactory.NewCameraPosition(
@@ -30,7 +31,7 @@ namespace BicycleTheftApp
                                   myposition, // Tokyo
                                    17d, // zoom
                                    45d, // bearing(rotation)
-                                   60d // tilt
+                                   0d // tilt
                                    )));
                     Pin _pinA = new Pin()
                     {
