@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BicycleTheftApp", "BicycleTheftApp\BicycleTheftApp.csproj", "{E7F13EEF-AC57-4825-9ED4-C8CACE36A81E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7F13EEF-AC57-4825-9ED4-C8CACE36A81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F13EEF-AC57-4825-9ED4-C8CACE36A81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F13EEF-AC57-4825-9ED4-C8CACE36A81E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E7F13EEF-AC57-4825-9ED4-C8CACE36A81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F13EEF-AC57-4825-9ED4-C8CACE36A81E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F13EEF-AC57-4825-9ED4-C8CACE36A81E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7D4DFEA-DB28-40F8-B584-40CD638D3C93}
+	EndGlobalSection
+EndGlobal
