@@ -21,9 +21,10 @@ namespace BicycleTheftApp
 
                 if (location != null)
                 {
+                 
                     //現在地取得コード Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(location.Latitude, location.Longitude);
 
-                    Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(35.710006892117, 139.81081025188); // 東京スカイツリーの緯度経度を初期位置に設定
+                    Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(37.401390, 140.365076); // カメラ初期位置を福島県に
 
 
                     await mymap.MoveCamera(CameraUpdateFactory.NewCameraPosition(
@@ -33,18 +34,37 @@ namespace BicycleTheftApp
                                    45d, // bearing(rotation)
                                    0d // tilt
                                    )));
-                    Pin _pinA = new Pin()
+
+                    System.IO.StringReader positiontxt = new System.IO.StringReader(Properties.Resources.position);
+                    System.IO.StringReader theftinfotxt = new System.IO.StringReader(Properties.Resources.theftinfo);
+                    System.IO.StringReader locationinfotxt = new System.IO.StringReader(Properties.Resources.locationinfo);
+                    // ↑ この行でResourceフォルダに入ってるtxtファイルを読み込んでる
+
+                    while (positiontxt.Peek() > -1)
                     {
-                        Icon = BitmapDescriptorFactory.FromBundle("pinmarker"), //don't use extension
-                        Type = PinType.Place,
-                        Label = "Tokyo SKYTREE",
-                        Address = "Sumida-ku, Tokyo, Japan",
-                        Position = myposition
-                    };
-                    mymap.Pins.Add(_pinA);
+                        //一行読み込んで表示する
+                        string[] xy = positiontxt.ReadLine().Split(',');
+
+
+                        Pin _pinA = new Pin()
+                        {
+                            Icon = BitmapDescriptorFactory.FromBundle("pinmarker"), //don't use extension
+                            Type = PinType.Place,
+                            Label = $"場所：{locationinfotxt.ReadLine()}",
+                            Address = $"盗難被害{theftinfotxt.ReadLine()}件",
+                            Position = new Position(double.Parse(xy[0]), double.Parse(xy[1].Replace(" ", "")))
+                        };
+                        mymap.Pins.Add(_pinA);
+
+                    }
+                    positiontxt.Close();
+                    theftinfotxt.Close();
+                    locationinfotxt.Close();
                 }
 
             }
+
+
         }
 
 
