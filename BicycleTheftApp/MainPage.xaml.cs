@@ -44,20 +44,61 @@ namespace BicycleTheftApp
                     {
                         //一行読み込んで表示する
                         string[] xy = positiontxt.ReadLine().Split(',');
+                        string info = theftinfotxt.ReadLine();
+                        int records = int.Parse(info);
 
-
-                        Pin _pinA = new Pin()
+                        if (records <= 5)
                         {
-                            Icon = BitmapDescriptorFactory.FromBundle("pinmarker"), //don't use extension
-                            Type = PinType.Place,
-                            Label = $"場所：{locationinfotxt.ReadLine()}",
-                            Address = $"盗難被害{theftinfotxt.ReadLine()}件",
-                            Position = new Position(double.Parse(xy[0]), double.Parse(xy[1].Replace(" ", "")))
-                        };
-                        mymap.Pins.Add(_pinA);
+                            Pin _pinA = new Pin()
+                            {
+                                Icon = BitmapDescriptorFactory.FromBundle("skiiro"), //don't use extension
+                                Type = PinType.Place,
+                                Label = $"場所：{locationinfotxt.ReadLine()}",
+                                Address = $"盗難被害{info}件",
+                                Position = new Position(double.Parse(xy[0]), double.Parse(xy[1].Replace(" ", "")))
+                            };
+                            mymap.Pins.Add(_pinA);
+                        }
+                        else if (records <= 10)
+                        {
+                            Pin _pinB = new Pin()
+                            {
+                                Icon = BitmapDescriptorFactory.FromBundle("sorenzi"), //don't use extension
+                                Type = PinType.Place,
+                                Label = $"場所：{locationinfotxt.ReadLine()}",
+                                Address = $"盗難被害{info}件",
+                                Position = new Position(double.Parse(xy[0]), double.Parse(xy[1].Replace(" ", "")))
+                            };
+                            mymap.Pins.Add(_pinB);
+                        }
+                        else if (records <= 15)
+                        {
 
+                            Pin _pinC = new Pin()
+                            {
+                                Icon = BitmapDescriptorFactory.FromBundle("taka"), //don't use extension
+                                Type = PinType.Place,
+                                Label = $"場所：{locationinfotxt.ReadLine()}",
+                                Address = $"盗難被害{info}件",
+                                Position = new Position(double.Parse(xy[0]), double.Parse(xy[1].Replace(" ", "")))
+                            };
+                            mymap.Pins.Add(_pinC);
+                        }
+
+                        else
+                        {
+                            Pin _pinD = new Pin()
+                            {
+                                Icon = BitmapDescriptorFactory.FromBundle("smurasaki"), //don't use extension
+                                Type = PinType.Place,
+                                Label = $"場所：{locationinfotxt.ReadLine()}",
+                                Address = $"盗難被害{info}件",
+                                Position = new Position(double.Parse(xy[0]), double.Parse(xy[1].Replace(" ", "")))
+                            };
+                            mymap.Pins.Add(_pinD);
+                        }
                     }
-                    positiontxt.Close();
+                        positiontxt.Close();
                     theftinfotxt.Close();
                     locationinfotxt.Close();
                 }
