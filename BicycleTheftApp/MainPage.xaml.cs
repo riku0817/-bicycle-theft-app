@@ -9,6 +9,11 @@ namespace BicycleTheftApp
         {
             InitializeComponent();
         }
+        private async void OnClicked(object sender, EventArgs e)
+        {
+            // メインページへ移動
+            await Shell.Current.GoToAsync("//MenuPage");
+        }
         protected override async void OnAppearing()
         {
             base.OnAppearing();

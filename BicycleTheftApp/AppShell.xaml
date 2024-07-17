@@ -7,16 +7,23 @@
     Shell.FlyoutBehavior="Disabled"
     Title="BicycleTheftApp">
 
+    
+
+    <ShellContent
+        Title="Sub"
+        ContentTemplate="{DataTemplate local:MenuPage}"
+        Route="MenuPage" />
+
+    <ShellContent
+        Title="Main"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
     <Shell.TitleView>
         <HorizontalStackLayout>
             <Label
                 Text="自転車盗難分布図 - BicycleTheftApp" VerticalOptions="Center" FontSize="20" TextColor="Aquamarine" FontAttributes="Bold"></Label>
         </HorizontalStackLayout>
     </Shell.TitleView>
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
 
 </Shell>

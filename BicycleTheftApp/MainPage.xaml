@@ -3,8 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Maui.GoogleMaps;assembly=Maui.GoogleMaps"
              x:Class="BicycleTheftApp.MainPage">
+    <ScrollView>
+        <VerticalStackLayout 
+            VerticalOptions="Center">
+            <maps:Map x:Name="mymap"
+           VerticalOptions="FillAndExpand"/>
+            <Button 
+                Text="Back To Main"
+                HorizontalOptions="Center" Clicked="OnClicked" />
 
-    <maps:Map x:Name="mymap"
-              VerticalOptions="FillAndExpand"/>
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
