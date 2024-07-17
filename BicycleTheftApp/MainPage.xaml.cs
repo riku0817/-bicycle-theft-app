@@ -22,16 +22,16 @@ namespace BicycleTheftApp
                 if (location != null)
                 {
                  
-                    //現在地取得コード Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(location.Latitude, location.Longitude);
+                  Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(location.Latitude, location.Longitude);
 
-                    Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(37.401390, 140.365076); // カメラ初期位置を福島県に
+                   // Maui.GoogleMaps.Position myposition = new Maui.GoogleMaps.Position(37.401390, 140.365076); // カメラ初期位置を福島県に
 
 
                     await mymap.MoveCamera(CameraUpdateFactory.NewCameraPosition(
                                new CameraPosition(
                                   myposition, // Tokyo
                                    17d, // zoom
-                                   45d, // bearing(rotation)
+                                   0d, // bearing(rotation)
                                    0d // tilt
                                    )));
 
@@ -98,14 +98,13 @@ namespace BicycleTheftApp
                             mymap.Pins.Add(_pinD);
                         }
                     }
-                        positiontxt.Close();
+                    positiontxt.Close();
                     theftinfotxt.Close();
                     locationinfotxt.Close();
                 }
 
             }
-
-
+          
         }
 
 
