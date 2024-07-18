@@ -3,19 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Maui.GoogleMaps;assembly=Maui.GoogleMaps"
              x:Class="BicycleTheftApp.MainPage">
-    <ScrollView>
-        <VerticalStackLayout 
-            VerticalOptions="Center">
+    <Grid>
 
-            <maps:Map x:Name="mymap"
+
+        <maps:Map x:Name="mymap"
            VerticalOptions="FillAndExpand"/>
 
-            <Button 
-                Text="Back To Main"
-                HorizontalOptions="Center" Clicked="OnClicked"/>
+        <Button 
+Text="←Back"
+HorizontalOptions="Start" VerticalOptions="End" TranslationX="3" TranslationY="-35" Clicked="OnClicked" BackgroundColor="#111" TextColor="White"/>
 
 
-        </VerticalStackLayout>
-    </ScrollView>
+    </Grid>
 
 </ContentPage>

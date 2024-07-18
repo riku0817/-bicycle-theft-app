@@ -10,25 +10,20 @@
     
 
     <ShellContent
-        Title="Sub"
+        Title=""
         ContentTemplate="{DataTemplate local:MenuPage}"
         Route="MenuPage" />
 
     <ShellContent
-        Title="Main"
+        Title=""
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
     <ShellContent
-        Title="numview"
+        Title=""
         ContentTemplate="{DataTemplate local:secnum}"
         Route="secnum" />
 
-    <Shell.TitleView>
-        <HorizontalStackLayout>
-            <Label
-                Text="自転車盗難分布図 - BicycleTheftApp" VerticalOptions="Center" FontSize="20" TextColor="Aquamarine" FontAttributes="Bold"></Label>
-        </HorizontalStackLayout>
-    </Shell.TitleView>
+
 
 </Shell>
