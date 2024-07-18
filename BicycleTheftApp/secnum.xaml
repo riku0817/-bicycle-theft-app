@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BicycleTheftApp.secnum"
+             Title="secnum">
+    <ScrollView>
+        <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+
+           
+            
+            <Label x:Name="titlen"
+               Text="防犯登録番号の入力・確認"
+               FontSize="20"
+               WidthRequest="1000"
+               Padding="20"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="blue"></Label>
+            <!-- <Image
+            Source="chari.png"
+            HeightRequest="185"
+            Aspect="AspectFit"
+            SemanticProperties.Description="dot net bot in a race car number eight" />  -->
+
+            <Label x:Name="titlenn"
+   Text="あなたの防犯登録番号"
+   FontSize="20"
+   WidthRequest="1000"
+   Padding="10"
+   HorizontalTextAlignment="Center"></Label>
+
+            <Label x:Name="hello"
+            Text="Hello, World!"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1"/>
+
+
+            <Label x:Name="info" Text="防犯登録番号を入力したあとに”確定”を押すとあなたの自転車の防犯登録番号をここで確認できるようになります。番号は何度でも変更できますが、変更前の番号は確認できなくなるのでご注意ください。" Margin="0"></Label>
+
+            <Label x:Name="b"></Label>
+
+
+            <Entry x:Name="name1" Placeholder="防犯登録番号を入力" Text="" Keyboard="Numeric" MaxLength="6"></Entry>
+
+            <!--   <Button
+x:Name="CounterBtn"
+Text="確定" 
+SemanticProperties.Hint="Counts the number of times you click"
+Clicked="OnCounterClicked"
+HorizontalOptions="Fill" />   -->
+
+            <Button x:Name="kaku"  Text="確定" Clicked="Button_Clicked" />
+            <Button 
+Text="←Back"
+HorizontalOptions="Start" Clicked="OnClicked" BackgroundColor="DimGray"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

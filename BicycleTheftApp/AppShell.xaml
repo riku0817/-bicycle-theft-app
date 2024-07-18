@@ -19,6 +19,11 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <ShellContent
+        Title="numview"
+        ContentTemplate="{DataTemplate local:secnum}"
+        Route="secnum" />
+
     <Shell.TitleView>
         <HorizontalStackLayout>
             <Label

@@ -7,9 +7,11 @@
             VerticalOptions="Center">
 
             <Button 
-                Text="Go to Sub"
+                Text="自転車盗難分布図へ移動"
                 HorizontalOptions="Center" Clicked="OnClicked" />
 
+            <Button x:Name="num"  Text="防犯登録の入力・確認" HorizontalOptions="Center" Clicked="num_Clicked" />
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

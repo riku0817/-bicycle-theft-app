@@ -19,4 +19,9 @@ public partial class MenuPage : ContentPage
         // サブページへ移動
         await Shell.Current.GoToAsync("//MainPage");
     }
+
+    private async void num_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//secnum");
+    }
 }

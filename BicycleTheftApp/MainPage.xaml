@@ -6,11 +6,14 @@
     <ScrollView>
         <VerticalStackLayout 
             VerticalOptions="Center">
+
             <maps:Map x:Name="mymap"
            VerticalOptions="FillAndExpand"/>
+
             <Button 
                 Text="Back To Main"
-                HorizontalOptions="Center" Clicked="OnClicked" />
+                HorizontalOptions="Center" Clicked="OnClicked"/>
+
 
         </VerticalStackLayout>
     </ScrollView>
