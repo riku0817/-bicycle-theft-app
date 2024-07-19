@@ -6,9 +6,9 @@
     
         <Frame BackgroundColor="#B6C5CA"></Frame>
         <Image Source="menulogo.png" HorizontalOptions="Center" VerticalOptions="Center" TranslationY="-100" Scale="0.9"></Image>
-        <ImageButton Source="menubutton1.png" Clicked="OnClicked" HorizontalOptions="Center" VerticalOptions="Center" Scale="0.5" TranslationY="50"></ImageButton>
+        <ImageButton x:Name="bunpuzu" Source="menubutton1.png" Clicked="OnClicked" Pressed="ImageButton_Pressed" HorizontalOptions="Center" VerticalOptions="Center" Scale="0.5" TranslationY="50"></ImageButton>
 
-        <ImageButton Source="menubutton2.png" Clicked="num_Clicked" HorizontalOptions="Center" VerticalOptions="Center" Scale="0.5" TranslationY="100"></ImageButton>
+        <ImageButton x:Name="secu" Source="menubutton2.png" Clicked="num_Clicked" Pressed="secu_Pressed" HorizontalOptions="Center" VerticalOptions="Center" Scale="0.5" TranslationY="100"></ImageButton>
 
 
     </Grid>

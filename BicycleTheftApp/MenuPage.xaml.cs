@@ -24,4 +24,18 @@ public partial class MenuPage : ContentPage
     {
         await Shell.Current.GoToAsync("//secnum");
     }
+
+    private async void ImageButton_Pressed(object sender, EventArgs e)
+    {
+        bunpuzu.Scale -= 0.1;
+        await Task.Delay(120);
+        bunpuzu.Scale += 0.1;
+    }
+
+    private async void secu_Pressed(object sender, EventArgs e)
+    {
+        secu.Scale -= 0.1;
+        await Task.Delay(120);
+        secu.Scale += 0.1;
+    }
 }
